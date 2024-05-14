@@ -59,4 +59,4 @@ export const updateUser = (id: number, params: UpdateUserParams) =>
 export const deleteUser = (id: number) => defHttp.delete({ url: `${Api.Base}/${id}` });
 
 export const updateUserPassword = (params: UpdateUserPassword) =>
-  defHttp.patch({ url: Api.Password, params });
+  defHttp.post({ url: Api.Password, params });

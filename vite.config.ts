@@ -1,5 +1,4 @@
 import { defineApplicationConfig } from '@vben/vite-config';
-import Inspector from 'vite-plugin-vue-inspector';
 
 export default defineApplicationConfig({
   overrides: {
@@ -45,10 +44,10 @@ export default defineApplicationConfig({
           secure: false,
         },
       },
-      // open: true, // 项目启动后，自动打开
-      // warmup: {
-      //   clientFiles: ['./index.html', './src/{views,components}/*'],
-      // },
+      open: true, // 项目启动后，自动打开
+      warmup: {
+        clientFiles: ['./index.html', './src/{views,components}/*'],
+      },
     },
     // plugins: [
     //   Inspector({

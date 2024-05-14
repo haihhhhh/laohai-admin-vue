@@ -127,9 +127,7 @@ export const useUserStore = defineStore({
     },
     async getUserInfoAction(): Promise<UserInfo | null> {
       if (!this.getToken) return null;
-      console.log('getUserInfoAction');
       const userInfo = await getUserInfo();
-      console.log('userinfo getted');
       const { roles = [] } = userInfo;
       if (isArray(roles)) {
         const roleList = roles.map((item) => item.value) as RoleEnum[];

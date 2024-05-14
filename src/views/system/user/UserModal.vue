@@ -11,7 +11,7 @@
   import { ref, computed, unref } from 'vue';
   import { BasicModal, useModalInner } from '/@/components/Modal';
   import { BasicForm, useForm } from '/@/components/Form/index';
-  import { createUser, updateUser, getUserInfo } from '/@/api/system/user';
+  import { createUser, updateUser, getUserInfo, CreateUserParams } from '/@/api/system/user';
   import { AvatarUpload } from '/@/components/Upload';
   import { formSchema } from './user.data';
   import { getDeptList } from '/@/api/system/dept';
@@ -76,7 +76,7 @@
       if (!values.password) delete values.password;
 
       if (!unref(isUpdate)) {
-        await createUser(values);
+        await createUser(values as CreateUserParams);
       } else {
         await updateUser(rowId.value, values);
       }

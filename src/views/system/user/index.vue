@@ -51,7 +51,14 @@
   const go = useGo();
   const searchInfo = reactive<Recordable>({});
   const [registerModal, { openModal }] = useModal();
-  const [registerTable, { reload, updateTableDataRecord, deleteTableDataRecord }] = useTable({
+  const [
+    registerTable,
+    {
+      reload,
+      //  updateTableDataRecord,
+      deleteTableDataRecord,
+    },
+  ] = useTable({
     title: '账号列表',
     api: getUserList,
     rowKey: 'id',
