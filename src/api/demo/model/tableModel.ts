@@ -1,4 +1,4 @@
-import { BasicPageParams, BasicFetchResult } from '@/api/model/baseModel';
+import { BasicPageParams, BasicPaginationResult } from '@/api/model/baseModel';
 /**
  * @description: Request list interface parameters
  */
@@ -17,4 +17,4 @@ export interface DemoListItem {
 /**
  * @description: Request list return value
  */
-export type DemoListGetResultModel = BasicFetchResult<DemoListItem>;
+export type DemoListGetResultModel = BasicPaginationResult<DemoListItem>;

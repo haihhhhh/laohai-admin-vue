@@ -1,4 +1,4 @@
-import { BasicPageParams, BasicFetchResult } from '@/api/model/baseModel';
+import { BasicPageParams, BasicPaginationResult } from '@/api/model/baseModel';
 
 export type AccountParams = BasicPageParams & {
   account?: string;
@@ -64,12 +64,12 @@ export interface RoleListItem {
 /**
  * @description: Request list return value
  */
-export type AccountListGetResultModel = BasicFetchResult<AccountListItem>;
+export type AccountListGetResultModel = BasicPaginationResult<AccountListItem>;
 
-export type DeptListGetResultModel = BasicFetchResult<DeptListItem>;
+export type DeptListGetResultModel = BasicPaginationResult<DeptListItem>;
 
-export type MenuListGetResultModel = BasicFetchResult<MenuListItem>;
+export type MenuListGetResultModel = BasicPaginationResult<MenuListItem>;
 
-export type RolePageListGetResultModel = BasicFetchResult<RoleListItem>;
+export type RolePageListGetResultModel = BasicPaginationResult<RoleListItem>;
 
 export type RoleListGetResultModel = RoleListItem[];

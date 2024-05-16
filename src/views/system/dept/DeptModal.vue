@@ -9,7 +9,13 @@
   import { BasicModal, useModalInner } from '/@/components/Modal';
   import { BasicForm, useForm } from '/@/components/Form/index';
   import { formSchema } from './dept.data';
-  import { getDeptList, createDept, updateDept } from '/@/api/system/dept';
+  import {
+    getDeptList,
+    createDept,
+    updateDept,
+    CreateDeptParams,
+    UpdateDeptParams,
+  } from '/@/api/system/dept';
 
   const emit = defineEmits(['success', 'register']);
 
@@ -56,9 +62,9 @@
       }
 
       if (!unref(isUpdate)) {
-        await createDept(values);
+        await createDept(values as CreateDeptParams);
       } else {
-        await updateDept(rowId.value, values);
+        await updateDept(rowId.value, values as UpdateDeptParams);
       }
 
       closeModal();

@@ -8,7 +8,7 @@
         <div class="change-avatar">
           <div class="mb-2"> 头像 </div>
           <CropperAvatar
-            :uploadApi="(uploadApi as any)"
+            :uploadApi="uploadApi as any"
             :value="avatar"
             btnText="更换头像"
             :btnProps="{ preIcon: 'ant-design:cloud-upload-outlined' }"
