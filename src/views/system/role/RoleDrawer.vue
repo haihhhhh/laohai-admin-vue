@@ -31,7 +31,7 @@
   import { BasicDrawer, useDrawerInner } from '/@/components/Drawer';
   import { TreeItem } from '/@/components/Tree';
   import { getMenuList } from '/@/api/system/menu';
-  import { createRole, updateRole, getRoleInfo } from '/@/api/system/role';
+  import { createRole, updateRole, getRoleInfo, RoleParam } from '/@/api/system/role';
   import { formSchema } from './role.data';
 
   const emit = defineEmits(['success', 'register']);
@@ -92,9 +92,9 @@
       };
 
       if (!unref(isUpdate)) {
-        await createRole(data);
+        await createRole(data as RoleParam);
       } else {
-        await updateRole(rowId.value, data);
+        await updateRole(rowId.value, data as RoleParam);
       }
 
       closeDrawer();
